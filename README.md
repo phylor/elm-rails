@@ -38,7 +38,7 @@
       show ("Hello " ++ noun)
     ```
 
-2. Open your `app/assets/javascript.js` and require your `Hello.elm`.
+2. Open your `app/assets/application.js` and require your `Hello.elm`.
   ```
   //= require Hello
   ```
