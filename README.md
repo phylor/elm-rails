@@ -32,8 +32,6 @@
     
     import Html exposing (..)
     import Html.App
-    import Html.Attributes exposing (..)
-    import Html.Events exposing (onClick)
     
     type alias Model =
         { quote : String
@@ -43,15 +41,15 @@
     init flags =
         ( Model flags.quote, Cmd.none )
     
-    update : Model -> Model
-    update model =
-        model
+    update : msg -> Model -> (Model, Cmd msg)
+    update message model =
+        ( model, Cmd.none )
     
     main : Program Model
     main =
       Html.App.programWithFlags
             { init = init
-            , update = \message model -> ( update model, Cmd.none )
+            , update = update
             , subscriptions = \_ -> Sub.none
             , view = view
             }
