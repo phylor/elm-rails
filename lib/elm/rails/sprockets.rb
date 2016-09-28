@@ -27,7 +27,8 @@ module Elm
         {
           data: Elm::Compiler.compile(
             [input[:filename]] +
-            (elm_dependencies(input[:filename], input[:load_path]).compact.uniq)
+            (elm_dependencies(input[:filename], input[:load_path]).compact.uniq),
+            elm_make_path: './node_modules/.bin/elm-make'
           )
         }
       end
