@@ -28,7 +28,7 @@ module Elm
           data: Elm::Compiler.compile(
             [input[:filename]] +
             (elm_dependencies(input[:filename], input[:load_path]).compact.uniq),
-            elm_make_path: Rails.configuration.elm_make_path
+            elm_make_path: Rails.config.elm_make_path
           )
         }
       end
